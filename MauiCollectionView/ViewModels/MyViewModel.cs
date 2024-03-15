@@ -9,7 +9,7 @@ namespace MauiCollectionView.ViewModels
 
         ~MyViewModel()
         {
-            Debug.WriteLine("~MyViewModel() called");
+            Trace.WriteLine("~MyViewModel() called");
         }
     }
 }

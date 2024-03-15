@@ -13,6 +13,6 @@ public partial class MyPage : ContentPage
 
     ~MyPage()
     {
-        Debug.WriteLine("~MyPage() called");
+        Trace.WriteLine("~MyPage() called");
     }
 }

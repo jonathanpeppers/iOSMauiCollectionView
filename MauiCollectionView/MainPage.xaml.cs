@@ -17,7 +17,7 @@ namespace MauiCollectionView
             GC.Collect();
             GC.WaitForPendingFinalizers();
             var totalMemory = GC.GetTotalMemory(true);
-            Debug.WriteLine($"Memory: {totalMemory}");
+            Trace.WriteLine($"Memory: {totalMemory}");
         }
 
         private async void Button_OnClicked(object? sender, EventArgs e)
