@@ -1,5 +1,4 @@
 using MauiCollectionView.ViewModels;
-using System.Diagnostics;
 
 namespace MauiCollectionView.Views;
 
@@ -13,6 +12,6 @@ public partial class MyPage : ContentPage
 
     ~MyPage()
     {
-        Trace.WriteLine("~MyPage() called");
+        Console.WriteLine("~MyPage() called");
     }
 }

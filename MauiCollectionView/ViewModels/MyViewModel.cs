@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using System.Diagnostics;
 
 namespace MauiCollectionView.ViewModels
 {
@@ -9,7 +8,7 @@ namespace MauiCollectionView.ViewModels
 
         ~MyViewModel()
         {
-            Trace.WriteLine("~MyViewModel() called");
+            Console.WriteLine("~MyViewModel() called");
         }
     }
 }

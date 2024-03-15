@@ -1,5 +1,4 @@
 ﻿using MauiCollectionView.Views;
-using System.Diagnostics;
 
 namespace MauiCollectionView
 {
@@ -17,7 +16,7 @@ namespace MauiCollectionView
             GC.Collect();
             GC.WaitForPendingFinalizers();
             var totalMemory = GC.GetTotalMemory(true);
-            Trace.WriteLine($"Memory: {totalMemory}");
+            Console.WriteLine($"Memory: {totalMemory}");
         }
 
         private async void Button_OnClicked(object? sender, EventArgs e)
