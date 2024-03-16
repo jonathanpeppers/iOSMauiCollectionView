@@ -1,13 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiCollectionView.MainPage">
+             x:Class="MauiCollectionView.MainPage"
+             Appearing="OnAppearing"
+             Loaded="OnLoaded">
 
-    <VerticalStackLayout>
+    <VerticalStackLayout
+        Spacing="30">
 
         <Button
-            Text="Go to next page"
-            Clicked="Button_OnClicked"/>
+            Text="Go to Xaml page: Leaking on iOS"
+            Clicked="ButtonXaml_OnClicked"/>
+
+        <Button
+            Text="Go to Cs page: Not leaking on iOS"
+            Clicked="ButtonCs_OnClicked"/>
 
     </VerticalStackLayout>
 </ContentPage>

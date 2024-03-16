@@ -1,6 +1,4 @@
-﻿using MauiCollectionView.ViewModels;
-using MauiCollectionView.Views;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 
 namespace MauiCollectionView
 {
@@ -20,9 +18,6 @@ namespace MauiCollectionView
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
-            builder.Services.AddTransient<MyPage>();
-            builder.Services.AddTransient<MyViewModel>();
 
             return builder.Build();
         }
