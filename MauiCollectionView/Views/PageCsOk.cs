@@ -23,6 +23,6 @@ public class PageCsOk : ContentPage
 
     ~PageCsOk()
     {
-        Logger.Log("~PageCsOk() called");
+        Console.WriteLine("~PageCsOk() called");
     }
 }

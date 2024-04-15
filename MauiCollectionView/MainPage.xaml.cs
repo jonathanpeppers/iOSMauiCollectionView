@@ -11,7 +11,7 @@ public partial class MainPage : ContentPage
 
     private void OnAppearing(object? sender, EventArgs e)
     {
-#if IOS || ANDROID
+#if IOS || ANDROID || MACCATALYST
         CallGc();
 #endif
     }
@@ -28,16 +28,18 @@ public partial class MainPage : ContentPage
         GC.Collect();
         GC.WaitForPendingFinalizers();
         var totalMemory = GC.GetTotalMemory(true);
-        Logger.Log($"Memory: {totalMemory}");
+        Console.WriteLine($"Memory: {totalMemory}");
     }
 
     private async void ButtonXaml_OnClicked(object? sender, EventArgs e)
     {
+        CallGc();
         await Navigation.PushAsync(new PageXamlLeak());
     }
 
     private async void ButtonCs_OnClicked(object? sender, EventArgs e)
     {
+        CallGc();
         await Navigation.PushAsync(new PageCsOk());
     }
 }
