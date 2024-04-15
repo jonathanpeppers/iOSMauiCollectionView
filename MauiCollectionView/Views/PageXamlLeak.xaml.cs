@@ -8,11 +8,12 @@ public partial class PageXamlLeak : ContentPage
     {
         InitializeComponent();
 
-        MyCollectionView.ItemsSource = new ObservableCollection<string> { "1", "2", "3" };
+        var collectionView = (CollectionView)Content;
+        collectionView.ItemsSource = new ObservableCollection<string> { "1", "2", "3" };
     }
 
     ~PageXamlLeak()
     {
-        Logger.Log("~PageXamlLeak() called");
+        Console.WriteLine("~PageXamlLeak() called");
     }
 }
